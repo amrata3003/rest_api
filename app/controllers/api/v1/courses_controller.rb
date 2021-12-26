@@ -7,9 +7,9 @@ class Api::V1::CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-      render json: @course, status: :ok
+      render json: @course, status: :created
     else
-      render json: { errors: @course.errors.full_messages.to_sentence }, status: :bad_request
+      render json: { errors: @course.errors.full_messages.to_sentence }, status: :unprocessable_entity
     end
   end
 
