@@ -44,4 +44,7 @@ POST Request -
           ]
         }
       }
-
+#
+#
+### To Check Test coverage of rspec test cases
+RUN rspec
